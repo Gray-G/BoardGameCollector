@@ -1,0 +1,16 @@
+﻿@model List<BoardGameCollector.Models.BoardGame>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>The Board Game Collection</h2>
+
+@foreach (var game in Model)
+{
+    <h3>@game.Title</h3>
+    <p><strong>Number of players:</strong> @game.NumberOfPlayers.ToString()</p>
+    <p><strong>Difficulty:</strong> @game.Difficulty</p>
+    <p><strong>Play time:</strong> @game.MinGameLength to @game.MinGameLength minutes</p>
+    <p>@game.Description</p>
+    <br />
+}
